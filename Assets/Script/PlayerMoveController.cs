@@ -12,6 +12,7 @@ public class NewBehaviourScript : MonoBehaviour
     public int MoveSpeed;
     private bool IsJumping;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,23 +30,18 @@ public class NewBehaviourScript : MonoBehaviour
 
     void Move()
     {
+        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        if (transform.position.x > 3.0f)
-        {
-            transform.Translate((new Vector2(3, 0) * MoveSpeed) * Time.deltaTime);
-        }
-        else if(transform.position.x < -3.0f)
-        {
-            transform.Translate((new Vector2(-3, 0) * MoveSpeed) * Time.deltaTime);
-        }
-        else
-        {
-            transform.Translate((new Vector2(x, 0) * MoveSpeed) * Time.deltaTime);
-        }
-        
+        if (pos.x < 0f) pos.x = 0f;
+        if (pos.x > 1f) pos.x = 1f;
+        if (pos.y < 0f) pos.y = 0f;
+        if (pos.y > 1f) pos.y = 1f;
 
+        transform.position = Camera.main.ViewportToWorldPoint(pos);
+
+        transform.Translate((new Vector2(x, 0) * MoveSpeed) * Time.deltaTime);
     }
 
     void Jump()
