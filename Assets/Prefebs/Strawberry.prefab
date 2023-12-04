@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 569880560708949971}
   - component: {fileID: 7047834350254819920}
   - component: {fileID: 4976587119559788335}
-  - component: {fileID: 3791135803898062093}
+  - component: {fileID: 2428475169734747921}
   - component: {fileID: 2462958620205342720}
   m_Layer: 0
   m_Name: Strawberry
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7047834350254819920
 SpriteRenderer:
@@ -114,7 +114,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &3791135803898062093
+--- !u!58 &2428475169734747921
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,7 +148,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.16
+  m_Radius: 0.075
 --- !u!114 &2462958620205342720
 MonoBehaviour:
   m_ObjectHideFlags: 0

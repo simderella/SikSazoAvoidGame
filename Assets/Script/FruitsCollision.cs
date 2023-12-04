@@ -29,10 +29,10 @@ public class FruitsCollision : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //Player에 부딪히면 사라진다.
+        //Player와 부딪히면 게임 종료.
         if (coll.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            gameManager.I.gameOver();
         }
     }
 }
