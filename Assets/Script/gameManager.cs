@@ -82,6 +82,9 @@ public class gameManager : MonoBehaviour
         totalScore = 0;
         spendtime = 0.0f;
     }
-
+    public void addScore(int Score)
+    {
+        totalScore += Score;
+    }
 
 }
