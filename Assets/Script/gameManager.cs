@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class gameManager : MonoBehaviour
 {
     public GameObject Strawberry;
     public GameObject endPanel;
+
 
     public static gameManager I;
     void Awake()
@@ -25,18 +28,17 @@ public class gameManager : MonoBehaviour
         Instantiate(Strawberry);	//딸기를 발생시킨다.
     }
 
+
     public void gameOver()
     {
         Time.timeScale = 0.0f;
         endPanel.SetActive(true);
+
     }
 
-    private void OnCollisionEnter2D(Collision2D coll)
+    public void retry()
     {
-        if (coll.gameObject.tag == "Strawberry")
-        {
-            gameManager.I.gameOver();
-        }
+        SceneManager.LoadScene("MainScene");
     }
 
     // Update is called once per frame
