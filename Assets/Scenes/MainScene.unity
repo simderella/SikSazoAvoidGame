@@ -470,18 +470,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5900085307f70dc4fbfff59c95567953, type: 3}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD0D5\uD6C4\uB8E8 :"
+  m_Text: "\uC810\uC218 :"
 --- !u!222 &774519970
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -550,11 +550,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5900085307f70dc4fbfff59c95567953, type: 3}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1599,7 +1599,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1943083563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4804c2af5f547ee47bab8193509b8ecd, type: 3}
+  m_Script: {fileID: 11500000, guid: daec706baf0536c499c7fba4183a1986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1971269300
@@ -1614,7 +1614,7 @@ GameObject:
   - component: {fileID: 1971269302}
   m_Layer: 0
   m_Name: playerSprite
-  m_TagString: tooth
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

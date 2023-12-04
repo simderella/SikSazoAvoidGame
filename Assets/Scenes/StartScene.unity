@@ -1500,7 +1500,7 @@ GameObject:
   - component: {fileID: 2134143269}
   - component: {fileID: 2134143271}
   m_Layer: 0
-  m_Name: 23Button_Midl_Red
+  m_Name: StartBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
