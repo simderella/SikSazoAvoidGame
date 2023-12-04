@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
     public GameObject Strawberry;
     public GameObject endPanel;
+    float spendtime;
+    int totalScore;
+    public Text scoreText;
+    public Text timeText;
+    public GameObject panel;
 
     public static gameManager I;
     void Awake()
@@ -18,6 +25,7 @@ public class gameManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating("makeStrawberry", 0, 0.5f); //어떤 함수를 몇 초마다 발생시킨다.
+        initGame();
     }
 
     void makeStrawberry()
@@ -42,6 +50,28 @@ public class gameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        spendtime += Time.deltaTime;
+        if (spendtime > 10)
+        {
+            Time.timeScale = 0.0f;
+            panel.SetActive(true);
+            spendtime = 0.0f;
+        }
+        timeText.text = spendtime.ToString("N1");
     }
+    public void retry()
+    {
+        SceneManager.LoadScene("SampelSceneSTY");
+    }
+    void initGame()
+    {
+        Time.timeScale = 1.0f;
+        //totalScore = 0;
+        spendtime = 0.0f;
+    }
+    public void addScore(int score)
+    {
+        totalScore += score;
+    }
+
 }
