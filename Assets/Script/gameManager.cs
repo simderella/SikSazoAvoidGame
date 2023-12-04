@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UIElements;
+using System.Threading;
+using UnityEngine.SocialPlatforms;
 
 public class gameManager : MonoBehaviour
 {
@@ -14,6 +16,10 @@ public class gameManager : MonoBehaviour
     public Text scoreText;
     public Text timeText;
     public GameObject panel;
+
+    public Text thisScoreTxt;   //이번 점수 나타내기
+    bool isRunning = true;
+
     public static gameManager I;
     void Awake()
     {
@@ -36,6 +42,7 @@ public class gameManager : MonoBehaviour
     public void gameOver()
     {
         Time.timeScale = 0.0f;
+        thisScoreTxt.text = spendtime.ToString("N2"); //나중에 탕후루 횟수 오르는 게 추가가 된다면 spendtime를 그걸로 변경.
         endPanel.SetActive(true);
     }
 
@@ -59,12 +66,11 @@ public class gameManager : MonoBehaviour
         }
         timeText.text = spendtime.ToString("N1");
 
-
-    }
-    public void addScore(int score)
-    {
-        totalScore += score;
-        scoreText.text = totalScore.ToString();
+        if(isRunning)   //점수의 시간차 없애기.
+        {
+            spendtime += Time.deltaTime;
+            timeText.text = spendtime.ToString("N2");
+        }
     }
     public void retry()
     {
