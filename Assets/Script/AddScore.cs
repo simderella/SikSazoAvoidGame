@@ -5,7 +5,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class AddScore : MonoBehaviour
 {
-    int score;
+    int Score;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +24,9 @@ public class AddScore : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (coll.gameObject.tag == "ground")
+        if (coll.gameObject.tag == "Ground")
         {
-            gameManager.I.addScore(score);
+            gameManager.I.addScore(Score);
             Destroy(gameObject);
         }
     }

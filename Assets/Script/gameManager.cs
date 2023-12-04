@@ -61,7 +61,7 @@ public class gameManager : MonoBehaviour
     }
     public void retry()
     {
-        SceneManager.LoadScene("SampelSceneSTY");
+        SceneManager.LoadScene("MainScene");
     }
     void initGame()
     {
@@ -69,9 +69,9 @@ public class gameManager : MonoBehaviour
         //totalScore = 0;
         spendtime = 0.0f;
     }
-    public void addScore(int score)
+    public void addScore(int Score)
     {
-        totalScore += score;
+        totalScore += Score;
     }
 
 }

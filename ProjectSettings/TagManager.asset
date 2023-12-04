@@ -8,8 +8,8 @@ TagManager:
   - Strawberry
   - DesLand
   - Apple
-
-
+  - tooth
+  - ground
   layers:
   - Default
   - TransparentFX

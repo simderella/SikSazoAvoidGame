@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerMoveController : MonoBehaviour
 {
     private Rigidbody2D right;
 
