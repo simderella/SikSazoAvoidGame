@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FruitsCollision : MonoBehaviour
+public class FruitsCollision : gameManager
 {
     // Start is called before the first frame update
     void Start()
@@ -11,6 +11,8 @@ public class FruitsCollision : MonoBehaviour
         float x = Random.Range(-2.7f, 2.7f);
         float y = Random.Range(3.0f, 5.0f);
         transform.position = new Vector3(x, y, 0);
+
+        
     }
 
     // Update is called once per frame

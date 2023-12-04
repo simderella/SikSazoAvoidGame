@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
-    public GameObject Strawberry;
+    public GameObject Strawberry, Apple, Orange, Banana, Cherry, Kiwi, Melon, Pineapple;
     public GameObject endPanel;
     float spendtime;
     int totalScore;
     public Text scoreText;
     public Text timeText;
     public GameObject panel;
+    int type;
 
     public static gameManager I;
     void Awake()
@@ -24,13 +25,41 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("makeStrawberry", 0, 0.5f); //어떤 함수를 몇 초마다 발생시킨다.
+        InvokeRepeating("makeFruits", 0, 0.5f); //어떤 함수를 몇 초마다 발생시킨다.
         initGame();
     }
 
-    void makeStrawberry()
+    void makeFruits()
     {
-        Instantiate(Strawberry);	//딸기를 발생시킨다.
+        type = Random.Range(1, 9);
+
+        switch (type)
+        {
+            case 1:
+                Instantiate(Strawberry);
+                break;
+            case 2:
+                Instantiate(Apple);
+                break;
+            case 3:
+                Instantiate(Orange);
+                break;
+            case 4:
+                Instantiate(Banana);
+                break;
+            case 5:
+                Instantiate(Cherry);
+                break;
+            case 6:
+                Instantiate(Kiwi);
+                break;
+            case 7:
+                Instantiate(Melon);
+                break;
+            case 8:
+                Instantiate(Pineapple);
+                break;
+        }
     }
 
     public void gameOver()
