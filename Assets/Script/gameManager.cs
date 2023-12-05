@@ -106,6 +106,7 @@ public class gameManager : MonoBehaviour
     public void addScore(int Score)
     {
         totalScore += Score;
+        scoreText.text = totalScore.ToString();
     }
 
 }
