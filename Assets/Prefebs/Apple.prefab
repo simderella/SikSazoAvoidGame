@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1970588706268677076
 SpriteRenderer:
@@ -120,7 +120,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.12, y: 0.13}
+  m_Size: {x: 1.87, y: 0.13}
   m_Direction: 0
 --- !u!50 &4263990042843239895
 Rigidbody2D:
@@ -164,6 +164,11 @@ MonoBehaviour:
   Strawberry: {fileID: 0}
   Apple: {fileID: 0}
   Orange: {fileID: 0}
+  Banana: {fileID: 0}
+  Cherry: {fileID: 0}
+  Kiwi: {fileID: 0}
+  Melon: {fileID: 0}
+  Pineapple: {fileID: 0}
   endPanel: {fileID: 0}
   scoreText: {fileID: 0}
   timeText: {fileID: 0}

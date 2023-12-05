@@ -74,6 +74,34 @@ public class gameManager : MonoBehaviour
         {
             gameManager.I.gameOver();
         }
+        else if (coll.gameObject.tag == "Apple")
+        {
+            gameManager.I.gameOver();
+        }
+        else if (coll.gameObject.tag == "Orange")
+        {
+            gameManager.I.gameOver();
+        }
+        else if (coll.gameObject.tag == "Banana")
+        {
+            gameManager.I.gameOver();
+        }
+        else if (coll.gameObject.tag == "Cherry")
+        {
+            gameManager.I.gameOver();
+        }
+        else if (coll.gameObject.tag == "Kiwi")
+        {
+            gameManager.I.gameOver();
+        }
+        else if (coll.gameObject.tag == "Melon")
+        {
+            gameManager.I.gameOver();
+        }
+        else if (coll.gameObject.tag == "Pineapple")
+        {
+            gameManager.I.gameOver();
+        }
     }
 
     // Update is called once per frame

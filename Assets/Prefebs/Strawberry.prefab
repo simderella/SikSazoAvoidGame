@@ -148,7 +148,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.075
+  m_Radius: 0.94
 --- !u!114 &2462958620205342720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +161,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daec706baf0536c499c7fba4183a1986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Strawberry: {fileID: 0}
+  Apple: {fileID: 0}
+  Orange: {fileID: 0}
+  Banana: {fileID: 0}
+  Cherry: {fileID: 0}
+  Kiwi: {fileID: 0}
+  Melon: {fileID: 0}
+  Pineapple: {fileID: 0}
+  endPanel: {fileID: 0}
+  scoreText: {fileID: 0}
+  timeText: {fileID: 0}
+  panel: {fileID: 0}
