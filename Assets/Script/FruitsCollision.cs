@@ -8,6 +8,7 @@ public class FruitsCollision : MonoBehaviour
     int type;
     float size;
     int score;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using System.Threading;
 using UnityEngine.SocialPlatforms;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class gameManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class gameManager : MonoBehaviour
     public GameObject panel;
 
     public Text thisScoreTxt;   //이번 점수 나타내기
+    public Text maxScoreTxt;    //최고 점수 나타내기
     bool isRunning = true;
 
     public static gameManager I;
@@ -30,6 +32,7 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1.0f;
         InvokeRepeating("makeStrawberry", 0, 0.3f); //어떤 함수를 몇 초마다 발생시킨다.
         initGame();
     }
@@ -41,9 +44,24 @@ public class gameManager : MonoBehaviour
 
     public void gameOver()
     {
+        isRunning = false;
         Time.timeScale = 0.0f;
-        thisScoreTxt.text = spendtime.ToString("N2"); //나중에 탕후루 횟수 오르는 게 추가가 된다면 spendtime를 그걸로 변경.
+        thisScoreTxt.text = spendtime.ToString("N1"); //나중에 탕후루 횟수 오르는 게 추가가 된다면 spendtime를 그걸로 변경.
         endPanel.SetActive(true);
+
+        if(PlayerPrefs.HasKey("bestScore") == false)    //최고 점수 나타내기
+        {
+            PlayerPrefs.SetFloat("bestScore", spendtime); //이 부분도 나중에 탕후루 피한 횟수로 변경 예정.
+        }
+        else
+        {
+            if(PlayerPrefs.GetFloat("bestScore") < spendtime)
+            {
+                PlayerPrefs.SetFloat("bestScore", spendtime);
+            }
+        }
+        float maxScore = PlayerPrefs.GetFloat("bestScore"); //최고 점수 띄워주기
+        maxScoreTxt.text =  maxScore.ToString("N1");
     }
 
     private void OnCollisionEnter2D(Collision2D coll)
@@ -69,19 +87,22 @@ public class gameManager : MonoBehaviour
         if(isRunning)   //점수의 시간차 없애기.
         {
             spendtime += Time.deltaTime;
-            timeText.text = spendtime.ToString("N2");
+            timeText.text = spendtime.ToString("N1");
         }
     }
+
     public void retry()
     {
         SceneManager.LoadScene("MainScene");
     }
-    void initGame()
+
+    public void initGame()
     {
         Time.timeScale = 1.0f;
         totalScore = 0;
         spendtime = 0.0f;
     }
+
     public void addScore(int Score)
     {
         totalScore += Score;
