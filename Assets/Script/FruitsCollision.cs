@@ -21,17 +21,17 @@ public class FruitsCollision : MonoBehaviour
 
         if (type == 1)
         {
-            size = 0.5f;
+            //size = 0.5f;
             score = 1;
         }
         if (type == 2)
         {
-            size = 1f;
+            //size = 1f;
             score = 2;
         }
 
 
-        transform.localScale = new Vector3(size, size, 0); //사이즈 변경이 필요할 때 사용
+        //transform.localScale = new Vector3(size, size, 0); //사이즈 변경이 필요할 때 사용
     }
 
     // Update is called once per frame

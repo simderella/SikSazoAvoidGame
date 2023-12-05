@@ -209,8 +209,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: gameManager, Assembly-CSharp
+      - m_Target: {fileID: 485871054}
+        m_TargetAssemblyTypeName: Panel, Assembly-CSharp
         m_MethodName: retry
         m_Mode: 1
         m_Arguments:
@@ -2166,6 +2166,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Strawberry: {fileID: 595188138003730772, guid: 055535d5b481e874a8e80729294d733f, type: 3}
+  Apple: {fileID: 4123322365241852715, guid: 99c78fc65854215448aebfd1af12b253, type: 3}
+  Orange: {fileID: 1300957617992229373, guid: 699be847a52edd84a90947baeb4468cc, type: 3}
+  Banana: {fileID: 462013711057910212, guid: 4e7ddf82f5e3a8144bc9d43bba62f093, type: 3}
+  Cherry: {fileID: 2030627812363849188, guid: 3c3ecd3cf250f244292744005ce1cc73, type: 3}
+  Kiwi: {fileID: 9063017897232639128, guid: 5892cccdd358e374c8200dca0d2adb7f, type: 3}
+  Melon: {fileID: 5947014506713177824, guid: ce5c95a6616753e48b13e5ffa0dc4f61, type: 3}
+  Pineapple: {fileID: 1930777469377322340, guid: 99fbedd098dfef1459c569a879548e12, type: 3}
   endPanel: {fileID: 485871053}
   scoreText: {fileID: 1431397470}
   timeText: {fileID: 238003844}
