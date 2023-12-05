@@ -1,29 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class MusicBox : MonoBehaviour
 {
-    private Toggle toggle;
-    private bool isOn;
-    //GameObject musicBox = new GameObject("MusicBox");
+    [SerializeField] AudioSource music;
 
-    void IsMusicBox()
+    public void OnMusic()
     {
-        isOn = toggle.isOn;
-
-        if (isOn)
-        {
-            isOn = false;
-            //AudioClip.Play();
-        }
-        else
-        {
-            isOn = true;
-            //AudioClip.Stop();
-        }
-
+        music.volume = music.volume == 0 ? (float)0.3f : 0;
     }
+
 }
+
