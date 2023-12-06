@@ -47,14 +47,14 @@ public class FruitsCollision : MonoBehaviour
         //Ground에 부딪히면 사라진다.
         if (coll.gameObject.tag == "Ground")
         {
-            gameManager.I.addScore(score);
+            GameManager.I.addScore(score);
             Destroy(gameObject);
         }
 
         //Player와 부딪히면 게임 종료.
         if (coll.gameObject.tag == "Player")
         {
-            gameManager.I.gameOver();
+            GameManager.I.gameOver();
         }
     }
 }

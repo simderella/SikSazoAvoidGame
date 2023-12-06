@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class startBtn : MonoBehaviour
+public class StartBtn : MonoBehaviour
 {
     public GameObject gamemode;
     // Start is called before the first frame update

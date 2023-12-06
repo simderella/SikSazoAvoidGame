@@ -8,7 +8,7 @@ using System.Threading;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class gameManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public GameObject Strawberry, Apple, Orange, Banana, Cherry, Kiwi, Melon, Pineapple;
     public GameObject endPanel;
@@ -24,7 +24,7 @@ public class gameManager : MonoBehaviour
     public Text score;  //점수 나타내기
     bool isRunning = true;
     public GameObject gamemode;
-    public static gameManager I;
+    public static GameManager I;
     void Awake()
     {
         I = this;
@@ -99,35 +99,35 @@ public class gameManager : MonoBehaviour
     {
         if (coll.gameObject.tag == "Strawberry")
         {
-            gameManager.I.gameOver();
+            GameManager.I.gameOver();
         }
         else if (coll.gameObject.tag == "Apple")
         {
-            gameManager.I.gameOver();
+            GameManager.I.gameOver();
         }
         else if (coll.gameObject.tag == "Orange")
         {
-            gameManager.I.gameOver();
+            GameManager.I.gameOver();
         }
         else if (coll.gameObject.tag == "Banana")
         {
-            gameManager.I.gameOver();
+            GameManager.I.gameOver();
         }
         else if (coll.gameObject.tag == "Cherry")
         {
-            gameManager.I.gameOver();
+            GameManager.I.gameOver();
         }
         else if (coll.gameObject.tag == "Kiwi")
         {
-            gameManager.I.gameOver();
+            GameManager.I.gameOver();
         }
         else if (coll.gameObject.tag == "Melon")
         {
-            gameManager.I.gameOver();
+            GameManager.I.gameOver();
         }
         else if (coll.gameObject.tag == "Pineapple")
         {
-            gameManager.I.gameOver();
+            GameManager.I.gameOver();
         }
     }
 
