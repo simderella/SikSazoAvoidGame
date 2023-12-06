@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class startBtn : MonoBehaviour
 {
+    public GameObject gamemode;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,12 @@ public class startBtn : MonoBehaviour
     }
 
     public void startGame()
+    {
+        gamemode.SetActive(true);
+        //SceneManager.LoadScene("MainScene");
+    }
+
+    public void ChooseGameMode()
     {
         SceneManager.LoadScene("MainScene");
     }

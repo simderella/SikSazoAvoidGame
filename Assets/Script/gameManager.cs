@@ -22,7 +22,7 @@ public class gameManager : MonoBehaviour
     public Text thisScoreTxt;   //이번 점수 나타내기
     public Text maxScoreTxt;    //최고 점수 나타내기
     bool isRunning = true;
-
+    public GameObject gamemode;
     public static gameManager I;
     void Awake()
     {
