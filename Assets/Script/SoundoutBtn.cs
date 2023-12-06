@@ -6,14 +6,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class MusicBox : MonoBehaviour
+public class SoundoutBtn : MonoBehaviour
 {
-    [SerializeField] AudioSource music;
-
-    public void OnMusic()
+    public void TimeOn()
     {
-        music.volume = music.volume == 0 ? (float)0.3f : 0;
+        Time.timeScale = 1;
     }
+    public void TimeOff()
+    {
+        Time.timeScale = 0;
+    }    
 
 }
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Panel : MonoBehaviour
+public class SoundPanel : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,9 +14,5 @@ public class Panel : MonoBehaviour
     void Update()
     {
         
-    }
-    public void retry()
-    {
-        gameManager.I.retry();
     }
 }
