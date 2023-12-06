@@ -19,10 +19,11 @@ public class gameManager : MonoBehaviour
     public GameObject panel;
     int type;
 
-    public Text thisScoreTxt;   //이번 점수 나타내기
-    public Text maxScoreTxt;    //최고 점수 나타내기
+    public Text thisScoreTxt;   //이번 시간 나타내기
+    public Text maxScoreTxt;    //최고 버틴 시간 나타내기
+    public Text score;  //점수 나타내기
     bool isRunning = true;
-
+    public GameObject gamemode;
     public static gameManager I;
     void Awake()
     {
@@ -75,6 +76,7 @@ public class gameManager : MonoBehaviour
     {
         isRunning = false;
         Time.timeScale = 0.0f;
+        score.text = totalScore.ToString("N0");  //피한 탕후루 점수.
         thisScoreTxt.text = spendtime.ToString("N1"); //나중에 탕후루 횟수 오르는 게 추가가 된다면 spendtime를 그걸로 변경.
         endPanel.SetActive(true);
 
