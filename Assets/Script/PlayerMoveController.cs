@@ -33,15 +33,27 @@ public class PlayerMoveController : MonoBehaviour
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
+        
+
 
         if (pos.x < 0f) pos.x = 0f;
-        if (pos.x > 1f) pos.x = 1f;
+        else if (pos.x > 1f) pos.x = 1f;
         if (pos.y < 0f) pos.y = 0f;
-        if (pos.y > 1f) pos.y = 1f;
+        else if (pos.y > 1f) pos.y = 1f;
+
+        if (x < 0)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (x > 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
 
         transform.position = Camera.main.ViewportToWorldPoint(pos);
 
         transform.Translate((new Vector2(x, 0) * MoveSpeed) * Time.deltaTime);
+        //¿Ãµø
     }
 
     void Jump()

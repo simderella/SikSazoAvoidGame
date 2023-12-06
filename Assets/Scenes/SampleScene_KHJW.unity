@@ -579,6 +579,7 @@ MonoBehaviour:
   timeText: {fileID: 1525280473}
   panel: {fileID: 922389366}
   thisScoreTxt: {fileID: 604033924}
+  maxScoreTxt: {fileID: 89529450}
 --- !u!1 &224001168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,7 +1347,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 275211834}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 191844202}
+        m_TargetAssemblyTypeName: gameManager, Assembly-CSharp
+        m_MethodName: retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &715641712
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,7 +1542,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uCD1D \uD53C\uD55C \uAC2F\uC218\uB294!?\n"
+  m_Text: "\uCD1D \uBC84\uD2F4 \uC2DC\uAC04\uC740!?\n"
 --- !u!222 &760286210
 CanvasRenderer:
   m_ObjectHideFlags: 0
