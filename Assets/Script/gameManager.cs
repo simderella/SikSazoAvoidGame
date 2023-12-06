@@ -23,7 +23,7 @@ public class gameManager : MonoBehaviour
     public Text maxScoreTxt;    //최고 버틴 시간 나타내기
     public Text score;  //점수 나타내기
     bool isRunning = true;
-
+    public GameObject gamemode;
     public static gameManager I;
     void Awake()
     {
